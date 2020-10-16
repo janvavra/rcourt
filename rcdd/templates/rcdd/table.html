@@ -1,0 +1,34 @@
+<table class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+        <th>#</th>
+        <th>Court</th>
+        <th>File number</th>
+        <th>Date pronounced</th>
+        <th>Date created</th>
+        <th>Date published</th>
+        <th>File name</th>
+        <th>Type</th>
+        <th>Theme</th>
+        <th>PDF</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for d in to_display %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ d.court.name }}</td>
+            <td>{{ d.file_number }}</td>
+            <td>{{ d.date_pron }}</td>
+            <td>{{ d.date_created }}</td>
+            <td>{{ d.date_published }}</td>
+            <td>{{ d.file_name }}</td>
+            <td>{{ d.file_type }}</td>
+            <td>{{ d.file_theme }}</td>
+            <td>
+                <a href=./d?id={{ d.file_number }}>[D]</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

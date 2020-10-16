@@ -1,0 +1,113 @@
+<form action="" method="post">
+    {% csrf_token %}
+    <table class="table-bordered table-striped">
+        <tbody>
+        {{ form.non_field_errors }}
+
+        {{ form.source.errors }}
+        {{ form.source }}
+        <table border="1">
+            <tr>
+                <th>{{ form.court.label_tag }}</th>
+                <td>
+                    {{ form.court.errors }}
+                    {{ form.court }}
+                </td>
+
+                <th>{{ form.file_type.label_tag }}</th>
+                <td>
+                    {{ form.file_type.errors }}
+                    {{ form.file_type }}
+                    <br/>
+                    {{ form.file_type.help_text }}
+                </td>
+
+            </tr>
+
+            <tr>
+                <th>{{ form.date_pron_from.label_tag }}</th>
+                <td>
+                    {{ form.date_pron_from.errors }}
+                    {{ form.date_pron_from }}
+                </td>
+                <th>{{ form.date_pron_to.label_tag }}</th>
+                <td>
+                    {{ form.date_pron_to.errors }}
+                    {{ form.date_pron_to }}
+                </td>
+
+            </tr>
+
+            <tr>
+                <th>{{ form.date_created_from.label_tag }}</th>
+                <td>
+                    {{ form.date_created_from.errors }}
+                    {{ form.date_created_from }}
+                    <br/>
+                    {{ form.date_created_from.help_text }}
+                </td>
+
+                <th>{{ form.date_created_to.label_tag }}</th>
+                <td>
+                    {{ form.date_created_to.errors }}
+                    {{ form.date_created_to }}
+                    <br/>
+                    {{ form.date_created_to.help_text }}
+                </td>
+
+
+            </tr>
+
+            <tr>
+                <th>{{ form.date_published_from.label_tag }}</th>
+                <td>
+                    {{ form.date_published_from.errors }}
+                    {{ form.date_published_from }}
+                    <br/>
+                    {{ form.date_published_from.help_text }}
+                </td>
+
+                <th>{{ form.date_published_to.label_tag }}</th>
+                <td>
+                    {{ form.date_published_to.errors }}
+                    {{ form.date_published_to }}
+                    <br/>
+                    {{ form.date_published_to.help_text }}
+                </td>
+
+
+            </tr>
+            <th>{{ form.file_name.label_tag }}</th>
+            <td colspan="3">
+                {{ form.file_name.errors }}
+                {{ form.file_name }}
+                <br/>
+                {{ form.file_name.help_text }}
+            </td>
+            <tr>
+
+            </tr>
+            <tr>
+                <th>{{ form.file_theme.label_tag }}</th>
+                <td colspan="3">
+                    {{ form.file_theme.errors }}
+                    {{ form.file_theme }}
+                    <br/>
+                    {{ form.file_theme.help_text }}
+                </td>
+            </tr>
+            <tr>
+                <th>{{ form.file_content.label_tag }}</th>
+                <td colspan="3">
+                    {{ form.file_content.errors }}
+                    {{ form.file_content }}
+                    <br/>
+                    {{ form.file_content.help_text }}
+                </td>
+            </tr>
+
+        </table>
+        <button type="submit">Search!</button>
+        </tbody>
+    </table>
+</form>
