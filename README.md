@@ -18,3 +18,5 @@ bs4
 psycopg2
 
 -- PostgreSQL is needed for the full-text search.
+
+https://raw.githubusercontent.com/janvavra/rcourt/main/rcdd_screen.jpg
